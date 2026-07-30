@@ -1,0 +1,345 @@
+.dashboard {
+	max-width: 1400px;
+	margin: auto;
+	padding: 40px;
+	min-height: 100vh;
+}
+
+/* ==========================
+   Welcome Card
+========================== */
+
+.welcome-card {
+	background: rgba(255,255,255,.15);
+	backdrop-filter: blur(15px);
+	border-radius: 22px;
+	padding: 35px;
+	text-align: center;
+	color: white;
+	box-shadow: 0 12px 30px rgba(0,0,0,.18);
+	margin-bottom: 35px;
+}
+
+.welcome-card h1 {
+	font-size: 42px;
+	margin-bottom: 15px;
+}
+
+.welcome-card p {
+	font-size: 18px;
+	line-height: 1.7;
+	max-width: 800px;
+	margin: auto;
+}
+
+/* ==========================
+   Statistics
+========================== */
+
+.stats-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+	gap: 25px;
+	margin-bottom: 40px;
+}
+
+.stat-box {
+	background: white;
+	padding: 30px;
+	border-radius: 20px;
+	text-align: center;
+	color: #4f46e5;
+	box-shadow: 0 12px 30px rgba(0,0,0,.12);
+	transition: .3s;
+}
+
+.stat-box:hover {
+	transform: translateY(-8px);
+	box-shadow: 0 20px 35px rgba(0,0,0,.18);
+}
+
+.stat-icon {
+	font-size: 45px;
+	margin-bottom: 15px;
+}
+
+.stat-box h2 {
+	font-size: 38px;
+	margin-bottom: 10px;
+}
+
+.stat-box p {
+	font-size: 17px;
+	font-weight: 600;
+}
+
+/* ==========================
+   Quick Actions
+========================== */
+
+.quick-actions {
+	background: rgba(255,255,255,.12);
+	backdrop-filter: blur(12px);
+	border-radius: 20px;
+	padding: 30px;
+	margin-bottom: 40px;
+}
+
+.quick-actions h2 {
+	margin-bottom: 20px;
+}
+
+.action-buttons {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+}
+
+.action-buttons button {
+	padding: 14px 28px;
+	border: none;
+	border-radius: 30px;
+	background: white;
+	color: #4f46e5;
+	font-weight: 700;
+	cursor: pointer;
+	transition: .3s;
+}
+
+.action-buttons button:hover {
+	transform: translateY(-4px);
+	background: #FFD54F;
+	color: #222;
+}
+
+/* ==========================
+   Assessment
+========================== */
+
+.assessment-section {
+	background: rgba(255,255,255,.12);
+	backdrop-filter: blur(12px);
+	padding: 30px;
+	border-radius: 20px;
+	margin-bottom: 40px;
+}
+
+.assessment-section h2 {
+	margin-bottom: 20px;
+}
+
+.assessment-card {
+	background: white;
+	color: #333;
+	padding: 25px;
+	border-radius: 18px;
+	margin-top: 20px;
+	box-shadow: 0 10px 25px rgba(0,0,0,.12);
+}
+
+.assessment-card h3 {
+	color: #4f46e5;
+	margin-bottom: 10px;
+}
+
+.assessment-card button {
+	margin-top: 15px;
+	padding: 12px 25px;
+	border: none;
+	border-radius: 30px;
+	background: #4f46e5;
+	color: white;
+	font-weight: bold;
+	cursor: pointer;
+	transition: .3s;
+}
+
+.assessment-card button:hover {
+	background: #3729c7;
+}
+
+/* ==========================
+   Applications Table
+========================== */
+
+.recent-table {
+	background: white;
+	padding: 30px;
+	border-radius: 20px;
+	box-shadow: 0 12px 30px rgba(0,0,0,.12);
+	overflow-x: auto;
+}
+
+.recent-table h2 {
+	color: #4f46e5;
+	margin-bottom: 25px;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	min-width: 650px;
+}
+
+thead {
+	background: #4f46e5;
+	color: white;
+}
+
+th {
+	padding: 15px;
+	font-size: 16px;
+}
+
+td {
+	padding: 15px;
+	text-align: center;
+	border-bottom: 1px solid #eee;
+}
+
+tbody tr:hover {
+	background: #f8f8ff;
+}
+
+/* ==========================
+   Status Badges
+========================== */
+
+.status {
+	display: inline-block;
+	padding: 8px 16px;
+	border-radius: 25px;
+	color: white;
+	font-weight: 600;
+	font-size: 14px;
+}
+
+.applied {
+	background: #3b82f6;
+}
+
+.resume-approved {
+	background: #8b5cf6;
+}
+
+.assessment-assigned {
+	background: #f59e0b;
+}
+
+.technical-interview {
+	background: #06b6d4;
+}
+
+.selected {
+	background: #10b981;
+}
+
+.rejected {
+	background: #ef4444;
+}
+
+/* ==========================
+   Tablet
+========================== */
+
+@media (max-width:992px){
+
+.dashboard{
+	padding:30px;
+}
+
+.welcome-card h1{
+	font-size:36px;
+}
+
+.stats-grid{
+	grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+/* ==========================
+   Mobile
+========================== */
+
+@media (max-width:768px){
+
+.dashboard{
+	padding:20px;
+}
+
+.welcome-card{
+	padding:25px;
+}
+
+.welcome-card h1{
+	font-size:30px;
+}
+
+.welcome-card p{
+	font-size:16px;
+}
+
+.stats-grid{
+	grid-template-columns:1fr;
+}
+
+.action-buttons{
+	flex-direction:column;
+}
+
+.action-buttons button{
+	width:100%;
+}
+
+.assessment-card{
+	padding:20px;
+}
+
+.recent-table{
+	padding:15px;
+}
+
+table{
+	min-width:600px;
+}
+
+}
+
+/* ==========================
+   Small Mobile
+========================== */
+
+@media (max-width:480px){
+
+.dashboard{
+	padding:15px;
+}
+
+.welcome-card h1{
+	font-size:26px;
+}
+
+.welcome-card p{
+	font-size:15px;
+}
+
+.stat-box{
+	padding:20px;
+}
+
+.stat-box h2{
+	font-size:30px;
+}
+
+.stat-icon{
+	font-size:36px;
+}
+
+.quick-actions,
+.assessment-section,
+.recent-table{
+	padding:18px;
+}
+
+}

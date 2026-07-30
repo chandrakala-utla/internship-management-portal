@@ -1,0 +1,420 @@
+/*==================================================
+ADMIN PAGE
+==================================================*/
+
+.admin-page{
+    min-height:100vh;
+    background:linear-gradient(135deg,#4f46e5,#7c3aed);
+    padding-top:110px;
+    padding-bottom:60px;
+}
+
+/*==================================================
+ADMIN NAVBAR
+==================================================*/
+
+.admin-navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:18px 8%;
+
+    background:rgba(79,70,229,.95);
+    backdrop-filter:blur(18px);
+
+    box-shadow:0 10px 25px rgba(0,0,0,.18);
+}
+
+.admin-logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    color:#fff;
+    font-size:28px;
+    font-weight:700;
+}
+
+.admin-logo span{
+    font-size:20px;
+    font-weight:700;
+}
+
+.admin-navbar ul{
+    display:flex;
+    align-items:center;
+    gap:35px;
+
+    list-style:none;
+}
+
+.admin-navbar a{
+    text-decoration:none;
+    color:white;
+    font-size:17px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.admin-navbar a:hover{
+    color:#ffe066;
+}
+.nav-btn{
+    background:none;
+    border:none;
+    color:white;
+    font-size:17px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.nav-btn:hover{
+    color:#ffe066;
+}
+.logout-btn{
+    border:none;
+    outline:none;
+
+    background:white;
+    color:#4f46e5;
+
+    padding:12px 28px;
+    border-radius:35px;
+
+    font-size:15px;
+    font-weight:600;
+
+    cursor:pointer;
+    transition:.3s;
+}
+
+.logout-btn:hover{
+    background:#ffe066;
+    transform:translateY(-3px);
+}
+
+/*==================================================
+CONTAINER
+==================================================*/
+
+.admin-container{
+    width:92%;
+    max-width:1400px;
+    margin:auto;
+}
+
+/*==================================================
+TITLE
+==================================================*/
+
+.admin-container h1{
+    text-align:center;
+    color:white;
+    font-size:50px;
+    margin-bottom:45px;
+}
+
+/*==================================================
+STATISTICS
+==================================================*/
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:28px;
+    margin-bottom:50px;
+}
+
+.card{
+    background:white;
+    border-radius:22px;
+    padding:35px 25px;
+
+    text-align:center;
+
+    transition:.35s;
+    cursor:pointer;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+
+    box-shadow:0 18px 40px rgba(0,0,0,.2);
+}
+
+.card .icon{
+    font-size:54px;
+}
+
+.card h2{
+    margin:18px 0;
+    color:#4f46e5;
+    font-size:45px;
+}
+
+.card p{
+    color:#555;
+    font-size:18px;
+    font-weight:600;
+}
+
+/*==================================================
+TABLE BOX
+==================================================*/
+
+.table-box{
+    background:white;
+    border-radius:24px;
+    padding:35px;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.18);
+}
+
+/*==================================================
+HEADER
+==================================================*/
+
+.table-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    margin-bottom:30px;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.table-header h2{
+    color:#4f46e5;
+    font-size:42px;
+}
+
+/*==================================================
+SEARCH
+==================================================*/
+
+.search-box{
+    width:360px;
+
+    padding:15px 22px;
+
+    border:1px solid #ddd;
+    border-radius:40px;
+
+    outline:none;
+
+    font-size:15px;
+
+    transition:.3s;
+}
+
+.search-box:focus{
+    border-color:#4f46e5;
+
+    box-shadow:0 0 0 4px rgba(79,70,229,.15);
+}
+
+/*==================================================
+TABLE
+==================================================*/
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+thead{
+    background:#4f46e5;
+    color:white;
+}
+
+thead th{
+    padding:18px;
+    font-size:17px;
+}
+
+tbody td{
+    padding:18px;
+    text-align:center;
+    border-bottom:1px solid #ececec;
+}
+
+tbody tr{
+    transition:.3s;
+}
+
+tbody tr:hover{
+    background:#f8f8ff;
+}
+
+/*==================================================
+STATUS
+==================================================*/
+
+.status{
+    display:inline-block;
+
+    padding:10px 22px;
+
+    border-radius:30px;
+
+    color:white;
+
+    font-size:14px;
+    font-weight:600;
+}
+
+.applied{
+    background:#3b82f6;
+}
+
+.resume-approved{
+    background:#8b5cf6;
+}
+
+.assessment-assigned{
+    background:#f59e0b;
+}
+
+.technical-interview{
+    background:#06b6d4;
+}
+
+.selected{
+    background:#10b981;
+}
+
+.rejected{
+    background:#ef4444;
+}
+
+/*==================================================
+SELECT
+==================================================*/
+
+select{
+    width:190px;
+
+    padding:11px 15px;
+
+    border:1px solid #d7d7d7;
+    border-radius:12px;
+
+    font-size:14px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+select:focus{
+    border-color:#4f46e5;
+    outline:none;
+}
+
+/*==================================================
+BUTTON
+==================================================*/
+
+.action-btn{
+    background:#4f46e5;
+    color:white;
+
+    border:none;
+
+    padding:10px 18px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.action-btn:hover{
+    background:#3729c7;
+}
+
+/*==================================================
+SCROLLBAR
+==================================================*/
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#5b4ce8;
+    border-radius:10px;
+}
+
+/*==================================================
+RESPONSIVE
+==================================================*/
+
+@media(max-width:1000px){
+
+.admin-navbar{
+    padding:15px 5%;
+}
+
+.admin-navbar ul{
+    gap:20px;
+}
+
+.admin-logo span{
+    font-size:18px;
+}
+
+.table-box{
+    overflow-x:auto;
+}
+
+table{
+    min-width:950px;
+}
+
+}
+
+@media(max-width:768px){
+
+.admin-navbar{
+    flex-direction:column;
+    gap:15px;
+}
+
+.admin-navbar ul{
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.admin-container h1{
+    font-size:38px;
+}
+
+.stats{
+    grid-template-columns:1fr;
+}
+
+.table-header{
+    flex-direction:column;
+    align-items:stretch;
+}
+
+.search-box{
+    width:100%;
+}
+
+.card{
+    padding:30px;
+}
+
+}
